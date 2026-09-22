@@ -2145,7 +2145,7 @@ button:focus-visible {
 }
 
 .hero-illustration {
-    height: 450px;
+    height: 310px;
     width: 100%;
     position: relative;
     overflow: hidden
@@ -3753,237 +3753,290 @@ body {
 }
 
 /* =========================================================
-   CANONICAL HOME HERO
-   One source of truth for the portrait + process flow.
+   FINAL HERO — PORTRAIT + PROCESS FLOW
    ========================================================= */
 
-.home-hero {
-    position: relative;
-    min-height: 640px;
-    overflow: hidden;
-    background: #eef5fb;
-    border-bottom: 1px solid var(--line);
+.home-hero-inner {
+    grid-template-columns: minmax(0, 52%) minmax(0, 48%);
+    min-height: 620px;
 }
 
-.home-hero-inner {
-    width: min(1280px, 100%);
-    min-height: 640px;
-    margin: 0 auto;
-    padding: 54px 44px 44px;
-    display: grid;
-    grid-template-columns: minmax(0, 52%) minmax(0, 48%);
-    align-items: center;
-    gap: 24px;
-    background: linear-gradient(90deg,
-            #eef5fb 0%,
-            #eef5fb 46%,
-            rgba(238, 245, 251, .94) 68%,
-            rgba(238, 245, 251, .55) 100%);
-}
+/* -----------------------------------------
+   LEFT CONTENT
+   ----------------------------------------- */
 
 .home-hero h1 {
     max-width: 760px;
-    margin: 16px 0;
-    font-size: clamp(42px, 4.25vw, 64px);
-    line-height: .98;
-    letter-spacing: -.06em;
 }
 
-.home-hero-copy {
-    max-width: 590px;
-    margin: 0;
-    color: #27394d;
-    font-size: 18px;
-    line-height: 1.62;
-}
-
-.home-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    margin-top: 18px;
-    color: #304257;
-    font: 12px "DM Mono", monospace;
-}
-
-.home-tags span {
-    width: 1px;
-    height: 13px;
-    margin: 0 11px;
-    background: #9eabb8;
-}
-
-.hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-top: 22px;
-}
-
-.button-small {
-    padding: 10px 14px;
-    font-size: 12px;
-}
-
-.button-outline {
-    background: rgba(255, 255, 255, .52);
-    border-color: #173c5c;
-    color: #173c5c;
-}
+/* -----------------------------------------
+   RIGHT HERO AREA
+   ----------------------------------------- */
 
 .hero-illustration-wrap {
-    position: relative;
-    width: 100%;
+    align-self: stretch;
     height: 100%;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .hero-illustration {
     position: relative;
     width: 100%;
-    height: 480px;
-    min-height: 480px;
+    height: 560px;
+    min-height: 560px;
     overflow: visible;
 }
 
+/* -----------------------------------------
+   PORTRAIT
+   ----------------------------------------- */
+
 .hero-portrait {
     position: absolute;
-    left: 61%;
-    top: 4px;
-    width: min(360px, 78%);
-    height: 355px;
-    z-index: 2;
+
+    left: 58%;
+    top: 0;
+
     transform: translateX(-50%);
-    filter: drop-shadow(16px 16px 0 rgba(7, 20, 33, .14));
+
+    width: min(440px, 90%);
+    height: 455px;
+
+    z-index: 2;
+
+    filter: drop-shadow(18px 18px 0 rgba(7, 20, 33, 0.14));
 }
 
 .hero-portrait-image {
     width: 100%;
     height: 100%;
-    display: block;
+
     object-fit: contain;
     object-position: bottom center;
 }
 
+/* -----------------------------------------
+   "FROM PROBLEM TO IMPACT"
+   ----------------------------------------- */
+
 .hero-note {
     position: absolute;
-    left: 17%;
-    top: 315px;
-    width: 110px;
-    z-index: 6;
-    color: #26394b;
+
+    left: 25%;
+    top: 405px;
+
+    width: 105px;
+
     font-family: cursive;
     font-size: 15px;
     line-height: 1.02;
+
+    color: #26394b;
+
     transform: rotate(-5deg);
-    pointer-events: none;
+
+    z-index: 6;
+
+    white-space: normal;
 }
 
 .hero-note span {
     display: block;
+
     margin-left: 42px;
+
     font-size: 25px;
+
     transform: rotate(16deg);
 }
 
+/* -----------------------------------------
+   PROCESS FLOW
+   ----------------------------------------- */
+
 .hero-flow {
     position: absolute;
-    left: 8%;
+
+    left: 17%;
     right: 0;
-    top: 340px;
-    z-index: 5;
+
+    top: 465px;
+
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
     gap: 9px;
+
+    z-index: 5;
 }
 
+/* -----------------------------------------
+   FLOW CARDS
+   ----------------------------------------- */
+
 .hero-flow-card {
-    position: relative;
-    min-height: 82px;
-    padding: 9px 7px;
+    min-height: 88px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(130, 160, 185, 0.42);
+
+    border-radius: 10px;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
+
     text-align: center;
-    color: #0e416e;
-    background: rgba(255, 255, 255, .72);
-    border: 1px solid rgba(130, 160, 185, .42);
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(39, 77, 110, .07);
+
+    padding: 10px 7px;
+
+    box-shadow:
+        0 10px 25px rgba(39, 77, 110, 0.07);
+
     backdrop-filter: blur(7px);
+
+    color: #0e416e;
+
+    position: relative;
 }
+
+/* -----------------------------------------
+   ARROWS BETWEEN CARDS
+   ----------------------------------------- */
 
 .hero-flow-card:not(:last-child)::after {
     content: "→";
+
     position: absolute;
-    right: -14px;
+
+    right: -13px;
     top: 50%;
-    z-index: 8;
-    color: #195a91;
+
+    transform: translateY(-50%);
+
     font-size: 16px;
     font-weight: 700;
-    transform: translateY(-50%);
+
+    color: #195a91;
+
+    z-index: 8;
 }
 
+/* -----------------------------------------
+   CARD TEXT
+   ----------------------------------------- */
+
 .hero-flow-card b {
-    margin-top: 7px;
-    color: #16283b;
     font-size: 10px;
     line-height: 1.1;
+
+    margin-top: 7px;
+
+    color: #16283b;
 }
 
 .hero-flow-card small {
-    margin-top: 3px;
-    color: #1e3348;
     font-size: 8px;
     line-height: 1.1;
+
+    margin-top: 3px;
+
+    color: #1e3348;
 }
 
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 1100px) {
+
     .home-hero-inner {
-        grid-template-columns: minmax(0, 51%) minmax(0, 49%);
-        padding-left: 32px;
-        padding-right: 32px;
+        grid-template-columns:
+            minmax(0, 52%) minmax(0, 48%);
     }
 
     .hero-portrait {
-        left: 57%;
-        width: min(330px, 78%);
-        height: 335px;
+        left: 55%;
+
+        width: min(400px, 92%);
+        height: 430px;
     }
 
     .hero-flow {
-        left: 3%;
-        top: 330px;
+        left: 10%;
+    }
+
+    .hero-note {
+        left: 15%;
+    }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-hero-inner {
+        grid-template-columns: 1fr;
+
+        min-height: 650px;
+    }
+
+    .hero-illustration-wrap {
+        margin-top: 20px;
+
+        height: 560px;
+    }
+
+    .hero-illustration {
+        height: 560px;
+        min-height: 560px;
+    }
+
+    .hero-portrait {
+        left: 50%;
+
+        width: 330px;
+        height: 405px;
+
+        top: 0;
     }
 
     .hero-note {
         left: 5%;
-        top: 305px;
+        top: 410px;
+    }
+
+    .hero-flow {
+        left: 4%;
+        right: 0;
+
+        top: 460px;
+
+        gap: 6px;
+    }
+
+    .hero-flow-card {
+        min-height: 82px;
     }
 }
 
-@media (max-width: 900px) {
-    .home-hero {
-        min-height: 0;
-    }
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
 
     .home-hero-inner {
-        min-height: 0;
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding: 48px 28px 34px;
-        background: linear-gradient(180deg, #eef5fb 0%, #eef5fb 76%, #e9f1f8 100%);
-    }
+        min-height: 610px;
 
-    .hero-illustration-wrap {
-        min-height: 500px;
-        margin-top: 26px;
+        padding:
+            34px 20px 24px;
     }
 
     .hero-illustration {
@@ -3991,91 +4044,43 @@ body {
         min-height: 500px;
     }
 
-    .hero-portrait {
-        left: 50%;
-        top: 0;
-        width: 300px;
-        height: 325px;
-    }
-
-    .hero-note {
-        left: 5%;
-        top: 315px;
-    }
-
-    .hero-flow {
-        left: 2%;
-        right: 2%;
-        top: 350px;
-        gap: 7px;
-    }
-
-    .hero-flow-card {
-        min-height: 78px;
-    }
-}
-
-@media (max-width: 600px) {
-    .home-hero-inner {
-        padding: 36px 20px 28px;
-    }
-
-    .home-hero h1 {
-        font-size: clamp(42px, 13vw, 62px);
-    }
-
-    .home-hero-copy {
-        font-size: 17px;
-    }
-
-    .home-tags {
-        font-size: 11px;
-        line-height: 1.8;
-    }
-
-    .hero-actions {
-        flex-wrap: wrap;
-    }
-
     .hero-illustration-wrap {
-        min-height: 455px;
-        margin-top: 22px;
-    }
-
-    .hero-illustration {
-        height: 455px;
-        min-height: 455px;
+        height: 500px;
     }
 
     .hero-portrait {
-        left: 50%;
+        width: 255px;
+        height: 335px;
+
         top: 0;
-        width: 245px;
-        height: 285px;
     }
 
     .hero-note {
         left: 0;
-        top: 280px;
-        width: 90px;
+        top: 365px;
+
         font-size: 11px;
     }
 
     .hero-note span {
-        margin-left: 27px;
         font-size: 20px;
+        margin-left: 30px;
     }
 
     .hero-flow {
         left: 0;
         right: 0;
-        top: 330px;
+
+        top: 405px;
+
         gap: 4px;
     }
 
     .hero-flow-card {
         min-height: 72px;
+
         padding: 5px 3px;
+
         border-radius: 8px;
     }
 
@@ -4084,7 +4089,6 @@ body {
     }
 
     .hero-flow-card b {
-        margin-top: 5px;
         font-size: 8px;
     }
 
@@ -4093,487 +4097,52 @@ body {
     }
 }
 
-html[data-theme="dark"] .home-hero {
-    background: #0d1825;
-}
-
-html[data-theme="dark"] .home-hero-inner {
-    background: linear-gradient(90deg,
-            #0d1825 0%,
-            #0d1825 46%,
-            rgba(13, 24, 37, .90) 68%,
-            rgba(13, 24, 37, .55) 100%);
-}
-
-html[data-theme="dark"] .home-hero-copy,
-html[data-theme="dark"] .home-tags {
-    color: #c5d2df;
-}
-
-html[data-theme="dark"] .home-tags span {
-    background: #526274;
-}
-
-html[data-theme="dark"] .hero-flow-card {
-    color: #bcdcff;
-    background: rgba(18, 31, 45, .78);
-    border-color: rgba(115, 160, 205, .30);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .20);
-}
-
-html[data-theme="dark"] .hero-flow-card b {
-    color: #edf5ff;
-}
-
-html[data-theme="dark"] .hero-flow-card small {
-    color: #a9bfd4;
-}
-
-html[data-theme="dark"] .hero-flow-card:not(:last-child)::after {
-    color: #72a7ff;
-}
-
-html[data-theme="dark"] .hero-note {
-    color: #b7cce0;
-}
-
-
-/* ============================================================
-   PRANAVFOLIO — HERO FINAL CASCADE FIX
-   Keep this block LAST. It intentionally overrides all legacy
-   hero rules above so the portrait + process flow cannot collide.
-   ============================================================ */
-
-.home-hero {
-    position: relative !important;
-    overflow: hidden !important;
-}
-
-.home-hero-inner {
-    position: relative !important;
-    width: min(1280px, 100%) !important;
-    min-height: 700px !important;
-    margin: 0 auto !important;
-    padding: 58px 44px 48px !important;
-    display: grid !important;
-    grid-template-columns: minmax(0, 56%) minmax(0, 44%) !important;
-    align-items: start !important;
-    gap: 20px !important;
-}
-
-.home-hero-copy {
-    position: relative !important;
-    z-index: 10 !important;
-    max-width: 720px !important;
-    padding-top: 4px !important;
-}
-
-.home-hero h1 {
-    max-width: 700px !important;
-}
-
-.home-hero .hero-copy {
-    max-width: 690px !important;
-}
-
-.hero-actions {
-    position: relative !important;
-    z-index: 20 !important;
-    margin-top: 24px !important;
-}
-
-.hero-illustration-wrap {
-    position: relative !important;
-    width: 100% !important;
-    height: 590px !important;
-    min-height: 590px !important;
-    margin: 0 !important;
-    overflow: visible !important;
-    align-self: start !important;
-}
+/* FINAL HERO POSITION */
 
 .hero-illustration {
-    position: relative !important;
-    width: 100% !important;
-    height: 590px !important;
-    min-height: 590px !important;
-    overflow: visible !important;
+    position: relative;
 }
 
-/* Short portrait: it ends BEFORE the process flow starts. */
-.hero-portrait {
-    position: absolute !important;
-    left: auto !important;
-    right: 0 !important;
-    top: 0 !important;
-    bottom: auto !important;
-    transform: none !important;
-    width: 300px !important;
-    max-width: 82% !important;
-    height: 350px !important;
-    z-index: 2 !important;
-    filter: drop-shadow(16px 16px 0 rgba(7, 20, 33, .16)) !important;
-}
-
-.hero-portrait-image {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: bottom center !important;
-}
-
-/* Process is BELOW the portrait and stays entirely in the right column. */
 .hero-flow {
-    position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 395px !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    gap: 8px !important;
-    z-index: 5 !important;
+    left: 17% !important;
+    right: -2% !important;
+    top: 500px !important;
+    z-index: 5;
 }
 
-.hero-flow-card {
-    min-width: 0 !important;
-    min-height: 82px !important;
-    padding: 9px 6px !important;
-    border-radius: 11px !important;
-    background: rgba(13, 24, 37, .96) !important;
-    border: 1px solid rgba(145, 190, 225, .28) !important;
-    box-shadow: none !important;
-    backdrop-filter: blur(8px) !important;
-    color: #dbeeff !important;
-    overflow: visible !important;
-}
-
-.hero-flow-card b,
-.hero-flow-card small {
-    background: transparent !important;
-    color: #dbeeff !important;
-    text-shadow: none !important;
-}
-
-.hero-flow-card b {
-    margin-top: 6px !important;
-    font-size: 10px !important;
-    line-height: 1.1 !important;
-}
-
-.hero-flow-card small {
-    margin-top: 3px !important;
-    font-size: 8px !important;
-    line-height: 1.15 !important;
-}
-
-/* Remove the old diagonal "From problem to impact" treatment. */
 .hero-note {
-    position: absolute !important;
-    left: 0 !important;
-    right: auto !important;
-    top: 363px !important;
-    width: auto !important;
-    margin: 0 !important;
-    z-index: 7 !important;
-    transform: none !important;
-    text-align: left !important;
-    font-size: 11px !important;
-    line-height: 1.1 !important;
-    color: #a9c8e2 !important;
-    white-space: nowrap !important;
+    left: 5% !important;
+    top: 415px !important;
+    width: 100px !important;
+    z-index: 7;
 }
 
-.hero-note span {
-    display: inline !important;
-    margin: 0 !important;
-    font-size: inherit !important;
+.hero-portrait {
+    z-index: 2;
 }
 
-/* Clean arrows: centered between cards, never over the portrait. */
-.hero-flow-card:not(:last-child)::after {
-    content: "→" !important;
-    position: absolute !important;
-    right: -9px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    font-size: 14px !important;
-    line-height: 1 !important;
-    color: #8bbde5 !important;
-    font-weight: 500 !important;
-    background: transparent !important;
-}
-
-/* Prevent accidental blue text-selection-looking labels. */
-.hero-flow,
-.hero-flow * {
-    -webkit-text-fill-color: currentColor;
-}
-
-.hero-flow-card b {
-    color: #dbeeff !important;
-}
-
-.hero-flow-card small {
-    color: #9fc2df !important;
-}
-
-/* ---------------- TABLET ---------------- */
 @media (max-width: 1100px) {
-    .home-hero-inner {
-        min-height: 690px !important;
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-        grid-template-columns: minmax(0, 55%) minmax(0, 45%) !important;
-    }
-
-    .hero-portrait {
-        width: 275px !important;
-        height: 325px !important;
-    }
-
     .hero-flow {
-        top: 370px !important;
-    }
-
-    .hero-note {
-        top: 338px !important;
-    }
-}
-
-/* ---------------- STACKED TABLET / MOBILE ---------------- */
-@media (max-width: 900px) {
-    .home-hero-inner {
-        min-height: auto !important;
-        grid-template-columns: 1fr !important;
-        padding: 46px 28px 54px !important;
-        gap: 18px !important;
-    }
-
-    .home-hero-copy {
-        max-width: 760px !important;
-    }
-
-    .hero-illustration-wrap {
-        height: 510px !important;
-        min-height: 510px !important;
-        margin-top: 8px !important;
-    }
-
-    .hero-illustration {
-        height: 510px !important;
-        min-height: 510px !important;
-    }
-
-    .hero-portrait {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%) !important;
-        width: 280px !important;
-        height: 320px !important;
-    }
-
-    .hero-flow {
-        left: 0 !important;
+        left: 10% !important;
         right: 0 !important;
-        top: 345px !important;
+        top: 470px !important;
     }
 
     .hero-note {
-        left: 0 !important;
-        top: 320px !important;
-    }
-}
-
-/* ---------------- PHONE ---------------- */
-@media (max-width: 600px) {
-    .home-hero-inner {
-        padding: 36px 18px 42px !important;
-    }
-
-    .home-hero h1 {
-        max-width: 100% !important;
-    }
-
-    .hero-illustration-wrap {
-        height: 470px !important;
-        min-height: 470px !important;
-    }
-
-    .hero-illustration {
-        height: 470px !important;
-        min-height: 470px !important;
-    }
-
-    .hero-portrait {
-        width: 225px !important;
-        max-width: 72% !important;
-        height: 275px !important;
-    }
-
-    .hero-note {
-        top: 290px !important;
-        font-size: 10px !important;
-    }
-
-    .hero-flow {
-        top: 315px !important;
-        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-        gap: 4px !important;
-    }
-
-    .hero-flow-card {
-        min-height: 68px !important;
-        padding: 6px 3px !important;
-        border-radius: 8px !important;
-    }
-
-    .hero-flow-card:not(:last-child)::after {
-        display: none !important;
-    }
-
-    .hero-flow-card b {
-        font-size: 8px !important;
-    }
-
-    .hero-flow-card small {
-        font-size: 6.5px !important;
-    }
-}
-
-/* ---------------- REDUCED MOTION ---------------- */
-@media (prefers-reduced-motion: reduce) {
-
-    .hero-flow-card,
-    .hero-portrait,
-    .hero-note {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
-/* ================================================================
-   FINAL HERO POSITION — RIGHT BOTTOM PROCESS + LARGER PORTRAIT
-   ================================================================ */
-@media (min-width: 901px) {
-    .home-hero-inner {
-        min-height: 720px !important;
-    }
-
-    .hero-illustration-wrap,
-    .hero-illustration {
-        height: 650px !important;
-        min-height: 650px !important;
-    }
-
-    /* Larger portrait, anchored to the upper-right corner. */
-    .hero-portrait {
-        right: -8px !important;
-        left: auto !important;
-        top: -6px !important;
-        width: 390px !important;
-        max-width: none !important;
-        height: 420px !important;
-    }
-
-    /* Process belongs in the bottom-right blank area, not below the image. */
-    .hero-flow {
-        left: auto !important;
-        right: -8px !important;
-        bottom: 28px !important;
-        top: auto !important;
-        width: min(100%, 690px) !important;
-        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-        gap: 8px !important;
-    }
-
-    /* Keep the heading beside the process instead of floating over it. */
-    .hero-note {
-        left: auto !important;
-        right: 8px !important;
-        top: auto !important;
-        bottom: 126px !important;
-        font-size: 11px !important;
-        line-height: 1.05 !important;
-    }
-}
-
-@media (min-width: 901px) and (max-width: 1100px) {
-    .home-hero-inner {
-        min-height: 710px !important;
-    }
-
-    .hero-illustration-wrap,
-    .hero-illustration {
-        height: 640px !important;
-        min-height: 640px !important;
-    }
-
-    .hero-portrait {
-        right: -4px !important;
-        width: 350px !important;
-        height: 390px !important;
-    }
-
-    .hero-flow {
-        right: -4px !important;
-        bottom: 24px !important;
-        width: min(100%, 620px) !important;
-    }
-}
-
-@media (max-width: 900px) {
-
-    .hero-illustration-wrap,
-    .hero-illustration {
-        height: 590px !important;
-        min-height: 590px !important;
-    }
-
-    .hero-portrait {
-        top: 0 !important;
-        width: 315px !important;
-        height: 355px !important;
-    }
-
-    .hero-flow {
-        top: auto !important;
-        bottom: 18px !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-    }
-
-    .hero-note {
-        top: auto !important;
-        bottom: 116px !important;
-        left: 0 !important;
-        right: auto !important;
+        left: 4% !important;
+        top: 405px !important;
     }
 }
 
 @media (max-width: 600px) {
-
-    .hero-illustration-wrap,
-    .hero-illustration {
-        height: 520px !important;
-        min-height: 520px !important;
-    }
-
-    .hero-portrait {
-        width: 355px !important;
-        height: 450px !important;
-    }
-
     .hero-flow {
-        bottom: 12px !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: 410px !important;
     }
 
     .hero-note {
-        bottom: 102px !important;
-        font-size: 10px !important;
+        left: 0 !important;
+        top: 365px !important;
     }
 }

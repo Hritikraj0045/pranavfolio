@@ -1,0 +1,18 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="900" height="1100" rx="28" fill="#101A27"/>
+<rect x="42" y="42" width="816" height="1016" rx="20" stroke="#314255"/>
+<path d="M80 790C215 665 326 624 450 624C574 624 685 665 820 790V1018H80V790Z" fill="#17314C"/>
+<circle cx="450" cy="410" r="178" fill="#E7EDF4"/>
+<path d="M271 430C280 297 346 220 450 220C554 220 620 297 629 430C585 393 533 376 450 376C367 376 315 393 271 430Z" fill="#172231"/>
+<circle cx="386" cy="416" r="11" fill="#172231"/>
+<circle cx="514" cy="416" r="11" fill="#172231"/>
+<path d="M390 495C422 522 478 522 510 495" stroke="#172231" stroke-width="9" stroke-linecap="round"/>
+<path d="M450 588V690" stroke="#E7EDF4" stroke-width="34" stroke-linecap="round"/>
+<path d="M300 690C345 650 555 650 600 690L681 1018H219L300 690Z" fill="#E7EDF4"/>
+<path d="M450 696L405 1018H495L450 696Z" fill="#C9D5E1"/>
+<rect x="82" y="90" width="220" height="44" rx="22" fill="#17314C" stroke="#45627E"/>
+<text x="108" y="119" fill="#D9E5F0" font-family="Arial, sans-serif" font-size="18" font-weight="700">BUSINESS · PRODUCT · TECH</text>
+<text x="82" y="920" fill="#9FB4C9" font-family="monospace" font-size="18">PRANAV SONAR</text>
+<text x="82" y="955" fill="#F3F7FB" font-family="Arial, sans-serif" font-size="42" font-weight="700">Turning complexity</text>
+<text x="82" y="1005" fill="#F3F7FB" font-family="Arial, sans-serif" font-size="42" font-weight="700">into usable products.</text>
+</svg>

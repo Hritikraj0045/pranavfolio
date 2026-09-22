@@ -1,0 +1,5 @@
+'use client';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {ArrowUpRight} from 'lucide-react';
+export default function CaseStudyCard({study}){return <motion.article layoutId={`case-${study.slug}`} className="case-card" whileHover={{y:-9,scale:1.018,rotateZ:-.25}} whileTap={{scale:.985,y:-2}}><div><div className="case-top"><span>{study.index}</span><span>{study.category}</span></div><div className={`case-visual ${study.visual==='ai'?'visual-ai':''}`}>{study.visual==='phone'&&<><div className="visual-grid"/><div className="visual-phone"/></>}{study.visual==='flow'&&<div className="visual-flow"><span className="node">SEBI</span><span className="arrow"/><span className="node">AMC</span><span className="arrow"/><span className="node">RTA</span></div>}{study.visual==='ai'&&<div className="stack"><span className="node">01</span><span className="node">02</span><span className="node">03</span></div>}</div><h3>{study.title}</h3><p>{study.tagline}</p></div><Link className="text-link" href={`/work/${study.slug}`}>View case study <ArrowUpRight size={16}/></Link></motion.article>}

@@ -1,37 +1,26 @@
-# Pranav Sonar Portfolio
+# Pranavfolio — Phase 2
 
-A React/Next.js portfolio recreated from the supplied visual reference, with Framer Motion interactions and scroll-driven movement inspired by the existing Hritikfolio animation style.
+Phase 2 builds the premium Case Study 01 experience on top of Phase 1.
 
-## Stack
+## Added
+- richer case-study hero visual
+- interactive Before / Desired State visual
+- interactive four-pillar product solution
+- anonymized mobile UI explorer
+- wireframe lightbox
+- interactive Star MF / Demat / CRM integration map
+- interactive UAT/release timeline
+- animated feedback loop
+- role cards and discovery chain
+- stronger responsive/mobile treatment
+- reduced-motion support retained
 
-- Next.js
-- React
-- Framer Motion
-- Lucide React
-- Plain CSS for the visual system
+## Routes
+- `/work/partner-rm-mobile`
+- `/work/skin-in-the-game`
+- `/work/ai-listing-intelligence`
 
-## Run
+All portfolio visuals are recreated/anonymized. No internal screenshots, PII, credentials, proprietary implementation details, API development claims, or unsupported metrics are included.
 
-```bash
-npm install
-npm run dev
-```
-
-Open http://localhost:3000.
-
-## Main files
-
-- `app/page.jsx` — page sections, content and motion
-- `app/globals.css` — responsive visual system
-- `app/layout.jsx` — metadata/layout
-
-## Motion system
-
-- Hero entrance stagger
-- Hero parallax on scroll
-- Scroll reveal for sections/cards
-- Card lift on hover
-- Arrow/link micro-interactions
-- Mobile navigation transition
-
-Replace placeholder LinkedIn/contact URLs and refine the case-study details as real project content becomes available.
+## Contact form
+Set `NEXT_PUBLIC_CONTACT_EMAIL` in `.env.local` to the email address that should receive enquiries. The contact form opens the visitor's default mail client with the form fields pre-filled.
