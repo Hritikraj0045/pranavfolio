@@ -2145,7 +2145,7 @@ button:focus-visible {
 }
 
 .hero-illustration {
-    height: 450px;
+    height: 310px;
     width: 100%;
     position: relative;
     overflow: hidden
@@ -4216,11 +4216,13 @@ html[data-theme="dark"] .hero-note {
 }
 
 .hero-portrait-image {
-    display: block !important;
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     object-position: bottom center !important;
+    display: block !important;
+    transform: scaleX(1.12) !important;
+    transform-origin: center bottom !important;
 }
 
 /* Process is BELOW the portrait and stays entirely in the right column. */
@@ -4471,12 +4473,13 @@ html[data-theme="dark"] .hero-note {
 
     /* Larger portrait, anchored to the upper-right corner. */
     .hero-portrait {
-        right: -8px !important;
+        right: 2px !important;
         left: auto !important;
         top: -6px !important;
-        width: 390px !important;
+        width: 450px !important;
         max-width: none !important;
-        height: 420px !important;
+        height: 480px !important;
+        margin-right: 10px !important;
     }
 
     /* Process belongs in the bottom-right blank area, not below the image. */
