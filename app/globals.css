@@ -770,7 +770,9 @@ a {
 }
 
 .hero-visual-mark.ai {
-    font-size: 24px
+    font-size: 24px;
+    margin-top: 210px;
+    color: var(--muted)
 }
 
 .objective-callout {
